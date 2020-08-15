@@ -9,10 +9,10 @@ const Feed = ({ feed: { avatar, name, designation, bio, fee } }) => {
       <Row>
         <Col>
           <Row>
-            <Col span={2}>
+            <Col xs={3} sm={3} md={3} lg={3} xl={2}>
               <Avatar src={avatar} className="mr-1" />
             </Col>
-            <Col span={22}>
+            <Col xs={21} sm={21} md={21} lg={21} xl={22}>
               <span className="float-right">
                 <DropDown items={[{ label: "Logout" }]}>
                   <DownOutlined />

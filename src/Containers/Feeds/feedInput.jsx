@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Row, Col, Avatar, Button, Input, Switch } from "antd";
 import { PaperClipOutlined, AudioOutlined } from "@ant-design/icons";
+import { PIC_URL } from "../../Constants/commonValues";
 
 const { TextArea } = Input;
 
@@ -21,17 +22,14 @@ const BOTTOM_ICONS = [
   },
 ];
 
-const url =
-  "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
-
 const FeedInput = () => {
   return (
     <Card style={cardStyle}>
       <Row>
-        <Col span={2}>
-          <Avatar src={url} />
+        <Col xs={3} sm={3} md={3} lg={3} xl={2}>
+          <Avatar src={PIC_URL} />
         </Col>
-        <Col span={22}>
+        <Col xs={21} sm={21} md={21} lg={21} xl={22}>
           <div style={{ width: "100%" }}>
             <span className="float-right">
               Paid Content {"  "}

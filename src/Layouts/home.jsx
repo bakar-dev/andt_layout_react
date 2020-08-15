@@ -8,6 +8,8 @@ import Menu from "../Components/Menu/menu";
 import SideBarLeft from "../Components/SideBarLeft/sidebarLeft";
 import SideBarRight from "../Components/SideBarRight/sidebarRight";
 
+import "../assets/Style/styles.scss";
+
 import "react-perfect-scrollbar/dist/css/styles.css";
 
 const TOP_MENU_ITEMS = [
@@ -27,11 +29,14 @@ const Home = () => {
       </Row>
       <Row>
         <Col span={24}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={3}></Col>
+          <Row>
+            <Col xs={0} sm={0} md={2} lg={3} xl={3}></Col>
             <Col
-              className="gutter-row"
-              span={4}
+              xs={0}
+              sm={0}
+              md={0}
+              lg={4}
+              xl={4}
               style={{
                 paddingRight: "none",
               }}
@@ -39,8 +44,11 @@ const Home = () => {
               <SideBarLeft />
             </Col>
             <Col
-              className="gutter-row"
-              span={10}
+              xs={24}
+              sm={24}
+              md={20}
+              lg={10}
+              xl={10}
               style={{
                 paddingLeft: "10px",
                 paddingRight: "none",
@@ -55,10 +63,10 @@ const Home = () => {
               />
               <Feeds />
             </Col>
-            <Col className="gutter-row" span={4}>
+            <Col className="ml-2" xs={0} sm={0} md={0} lg={4} xl={4}>
               <SideBarRight />
             </Col>
-            <Col className="gutter-row" span={3}></Col>
+            <Col xs={0} sm={0} md={2} lg={3} xl={3}></Col>
           </Row>
         </Col>
       </Row>
