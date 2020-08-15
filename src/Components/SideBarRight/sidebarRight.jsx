@@ -1,8 +1,9 @@
 import React from "react";
 import { Input, Select, DatePicker } from "antd";
 
-const { Option } = Select;
+import { CONTENT_TYPES } from "../../Constants/commonValues";
 
+const { Option } = Select;
 const { RangePicker } = DatePicker;
 
 const SidebarRight = () => {
@@ -15,9 +16,9 @@ const SidebarRight = () => {
         className="mt-2 mb-2"
         style={{ width: "100%" }}
       >
-        <Option value="paid">Paid Content</Option>
-        <Option value="free">Free Content</Option>
-        <Option value="all">All Content</Option>
+        {CONTENT_TYPES.map(({ value, label }) => (
+          <Option value={value}>{label}</Option>
+        ))}
       </Select>
 
       <RangePicker />

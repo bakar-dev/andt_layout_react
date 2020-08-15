@@ -6,3 +6,9 @@ export const USER = {
   email: "admin.com/entice",
   followers: "1MM",
 };
+
+export const CONTENT_TYPES = [
+  { label: "Paid Content", value: "paid" },
+  { label: "Free Content", value: "free" },
+  { label: "All Content", value: "all" },
+];

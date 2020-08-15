@@ -19,6 +19,13 @@ const TOP_MENU_ITEMS = [
   { label: "Purchases" },
 ];
 
+const FEED_COL_STYLE = {
+  paddingLeft: "10px",
+  paddingRight: "none",
+  borderLeft: "1px solid lightgray",
+  borderRight: "1px solid lightgray",
+};
+
 const Home = () => {
   return (
     <>
@@ -43,19 +50,7 @@ const Home = () => {
             >
               <SideBarLeft />
             </Col>
-            <Col
-              xs={24}
-              sm={24}
-              md={20}
-              lg={10}
-              xl={10}
-              style={{
-                paddingLeft: "10px",
-                paddingRight: "none",
-                borderLeft: "1px solid lightgray",
-                borderRight: "1px solid lightgray",
-              }}
-            >
+            <Col xs={24} sm={24} md={20} lg={10} xl={10} style={FEED_COL_STYLE}>
               <Menu
                 items={TOP_MENU_ITEMS}
                 selectedKeys={["global"]}
