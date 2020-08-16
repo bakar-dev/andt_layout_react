@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Drawer } from "antd";
-import { RightCircleOutlined } from "@ant-design/icons";
+import { AliwangwangOutlined } from "@ant-design/icons";
 
 const DrawerNav = ({ children }) => {
   const [visible, setVisible] = useState(false);
@@ -12,7 +12,7 @@ const DrawerNav = ({ children }) => {
   };
   return (
     <div>
-      <RightCircleOutlined onClick={showDrawer} />
+      <AliwangwangOutlined onClick={showDrawer} />
       <Drawer
         title={new Date().toLocaleString()}
         placement="left"

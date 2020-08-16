@@ -15,7 +15,7 @@ const Feeds = () => {
           height: 570,
         }}
       >
-        <PerfectScrollbar component="div" className="pr-4 pt-4 pb-4">
+        <PerfectScrollbar component="div" className="pr-4 pt-4 pb-4 pl-2">
           <FeedInput />
           {FEEDS.map((feed) => (
             <Feed feed={feed} key={feed.id} />

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Row, Col, Layout } from "antd";
+import React from "react";
+import { Row, Col } from "antd";
 
 import Feeds from "../Containers/Feeds/feeds";
 
@@ -58,7 +58,7 @@ const Home = () => {
               />
               <Feeds />
             </Col>
-            <Col className="ml-2" xs={0} sm={0} md={0} lg={4} xl={4}>
+            <Col className="ml-4 pl-4" xs={0} sm={0} md={0} lg={4} xl={4}>
               <SideBarRight />
             </Col>
             <Col xs={0} sm={0} md={2} lg={3} xl={3}></Col>

@@ -1,7 +1,11 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Layout, Row, Col, Avatar, Space } from "antd";
-import { DownOutlined, UserOutlined, FilterOutlined } from "@ant-design/icons";
+import { Layout, Row, Col, Avatar } from "antd";
+import {
+  DownOutlined,
+  UserOutlined,
+  UnorderedListOutlined,
+} from "@ant-design/icons";
 
 import Logo from "../Logo/logo";
 import SearchBox from "../SearchBox/searchBox";
@@ -19,10 +23,10 @@ const Navbar = () => {
     <>
       <Header className="header">
         <Row>
-          <Col xs={0} sm={0} md={0} lg={8} xl={7}>
+          <Col xs={0} sm={0} md={0} lg={8} xl={8}>
             <Logo />
           </Col>
-          <Col xs={2} sm={2} md={2} lg={0} xl={0}>
+          <Col xs={3} sm={3} md={4} lg={0} xl={0}>
             <Drawer>
               {" "}
               <Profile user={USER} />
@@ -30,13 +34,16 @@ const Navbar = () => {
               <SideBarLeft />{" "}
             </Drawer>
           </Col>
-          <Col xs={20} sm={20} md={20} lg={8} xl={10}>
+          <Col xs={18} sm={18} md={16} lg={8} xl={8}>
             <SearchBox />
           </Col>
-          <Col xs={2} sm={2} md={2} lg={0} xl={0}>
-            <FilterOutlined />
+          <Col xs={3} sm={3} md={4} lg={0} xl={0}>
+            <span>
+              {" "}
+              <UnorderedListOutlined style={{ fontSize: "18px" }} />
+            </span>
           </Col>
-          <Col xs={0} sm={0} md={0} lg={8} xl={7}>
+          <Col xs={0} sm={0} md={0} lg={8} xl={8}>
             <Avatar size="small" icon={<UserOutlined />} />{" "}
             <span className="mr-4">admin.com/jin </span>
             <DropDown items={[{ label: "Logout" }]}>

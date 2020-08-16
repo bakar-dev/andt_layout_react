@@ -2,34 +2,31 @@ import React from "react";
 import { Menu, Row, Col } from "antd";
 
 const MenuItems = ({ items, mode, selectedKeys }) => {
-  let style = "";
-
   const getStyle = (key) => {
     if (key === selectedKeys[0] && mode === "horizontal") {
-      return (style = {
+      return {
         color: "black",
-        borderBottom: "2px solid black",
+        borderBottom: "3px solid black",
         textAlign: "center",
-      });
+      };
     } else if (key === selectedKeys[0] && mode === "inline") {
-      return (style = {
+      return {
         color: "black",
-        borderRight: "2px solid black",
+        border: "none",
+        borderRight: "3px solid black",
         backgroundColor: "lightgray",
-      });
+      };
     } else if (mode === "horizontal") {
-      return (style = {
-        color: "black",
+      return {
         borderBottom: "none",
         textAlign: "center",
         color: "gray",
-      });
+      };
     } else {
-      return (style = {
-        color: "black",
+      return {
         borderBottom: "none",
         color: "gray",
-      });
+      };
     }
   };
 
@@ -43,7 +40,6 @@ const MenuItems = ({ items, mode, selectedKeys }) => {
             <Col key={key || i} xs={6} sm={6} md={6} lg={6} xl={6}>
               <Menu.Item
                 key={key || i}
-                icon={icon}
                 onClick={() => console.log("menu item clicked")}
                 style={getStyle(key)}
               >
@@ -56,15 +52,17 @@ const MenuItems = ({ items, mode, selectedKeys }) => {
     );
   } else {
     menu = (
-      <Menu mode={mode} selectedKeys={selectedKeys}>
+      <Menu mode={mode}>
         {items.map(({ label, key, icon }, i) => (
           <Menu.Item
             key={key || i}
-            icon={icon}
             onClick={() => console.log("menu item clicked")}
             style={getStyle(key)}
           >
-            <span className="mt-2">{label}</span>
+            <Row>
+              <Col>{icon}</Col>
+              <Col className="mt-1">{label}</Col>
+            </Row>
           </Menu.Item>
         ))}
       </Menu>
