@@ -5,7 +5,10 @@ import { PIC_URL } from "../../Constants/commonValues";
 
 const { TextArea } = Input;
 
-const cardStyle = { boxShadow: "1px 1px 5px 1px rgba(208, 216, 243, 0.6)" };
+const cardStyle = {
+  boxShadow: "1px 1px 5px 1px rgba(208, 216, 243, 0.6)",
+  borderRadius: "10px",
+};
 const buttonStyle = { background: "black", color: "White", width: 110 };
 const textAreaStyle = {
   border: "none",

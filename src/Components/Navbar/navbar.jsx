@@ -5,6 +5,7 @@ import {
   DownOutlined,
   UserOutlined,
   UnorderedListOutlined,
+  LogoutOutlined,
 } from "@ant-design/icons";
 
 import Logo from "../Logo/logo";
@@ -46,7 +47,12 @@ const Navbar = () => {
           <Col xs={0} sm={0} md={0} lg={8} xl={8}>
             <Avatar size="small" icon={<UserOutlined />} />{" "}
             <span className="mr-4">admin.com/jin </span>
-            <DropDown items={[{ label: "Logout" }]}>
+            <DropDown
+              items={[
+                { label: "Logout", key: "logout", icon: <LogoutOutlined /> },
+              ]}
+              selectedKeys={["logout"]}
+            >
               <DownOutlined />
             </DropDown>
           </Col>

@@ -1,11 +1,24 @@
 import React from "react";
 import { Card, Row, Col, Avatar, Button } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  UserDeleteOutlined,
+  AudioMutedOutlined,
+  CloseCircleOutlined,
+  WarningOutlined,
+} from "@ant-design/icons";
 import DropDown from "../../Components/Dropdown/dropdown";
+
+const DROPDOWN_iTEMS = [
+  { label: "Unfollow", key: "unfollow", icon: <UserDeleteOutlined /> },
+  { label: "Mute", key: "mute", icon: <AudioMutedOutlined /> },
+  { label: "Block", key: "block", icon: <CloseCircleOutlined /> },
+  { label: "Report Content", key: "report", icon: <WarningOutlined /> },
+];
 
 const Feed = ({ feed: { avatar, name, designation, bio, fee } }) => {
   return (
-    <Card className="mt-4">
+    <Card className="mt-4" style={{ borderRadius: "10px" }}>
       <Row>
         <Col>
           <Row>
@@ -14,7 +27,7 @@ const Feed = ({ feed: { avatar, name, designation, bio, fee } }) => {
             </Col>
             <Col xs={21} sm={21} md={21} lg={21} xl={22}>
               <span className="float-right">
-                <DropDown items={[{ label: "Logout" }]}>
+                <DropDown items={DROPDOWN_iTEMS} selectedKeys={["unfollow"]}>
                   <DownOutlined />
                 </DropDown>
               </span>
